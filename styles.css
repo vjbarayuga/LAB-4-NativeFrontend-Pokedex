@@ -1,0 +1,161 @@
+body, h1, h2{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    margin: 64px 0;
+}
+p{
+    text-transform: capitalize;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+header{
+    background-color: rgb(118, 118, 245);
+    color: #f8fafa;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+header h1{
+    padding: 0 6px;
+}
+.filter-search{
+    display: flex;
+    padding: 24px 0;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    margin-right: 6px;
+}
+input{
+    height: 28px;
+    font-size: 18px;
+    width: 328px;
+    padding: 4px;
+    margin-right: 16px;
+    border-radius: 4px;
+    border: #121212 1px solid;
+}
+select{
+    height: 40px;
+    font-size: 18px;
+    padding: 4px;
+    margin-right: 16px;
+    border-radius: 4px;
+    border: #121212 1px solid;
+}
+select:focus{
+    border: rgb(118, 118, 245) 1px solid;
+}
+input:focus{
+    outline: none;
+    border: rgb(118, 118, 245) 1px solid;
+}
+select:hover{
+    cursor: pointer;
+}
+button{
+    height: 40px;
+    margin-right: 4px;
+    padding: 0 12px;
+    text-transform: uppercase;
+    /* background-color: rgb(118, 118, 245); */
+    border: rgb(118, 118, 245) 1px solid;
+    color: rgb(118, 118, 245);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+}
+button:hover{
+    color: #f8fafa;
+    background-color: rgb(118, 118, 245);
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 24px;
+}
+#grid-container div{
+    background: #fff;
+    padding: 0 6px;
+}
+#grid-container div img{
+    width: 100%;
+    background-color: #eee;
+    border-radius: 8px;
+}
+#grid-container div h2{
+    margin: 6px 12px;
+    text-transform: capitalize;
+}
+#grid-container div p{
+    display: inline;
+    margin-left: 12px;
+    padding: 2px 22px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+#grid-container div p.grass{
+    background: #b9e4a0;
+}
+#grid-container div p.poison{
+    background: #d382f0;
+    color: #f8fafa;
+}
+#grid-container div p.earth{
+    background: #bfa883;
+    color: #f8fafa;
+}
+#grid-container div p.water{
+    background: #7ab2e6;
+    color: #f8fafa;
+}
+#grid-container div p.fire{
+    background: #f48953;
+    color: #f8fafa;
+}
+#grid-container div p.flying{
+    background: #ccdfeb;
+    color: #121212;
+}
+#grid-container div p.bug{
+    background: #397815;
+    color: #f8fafa;
+}
+#grid-container div p.normal{
+    background: #c0c2bf;
+    color: #121212;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+    #grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .filter-search{
+        flex-direction: column;
+        /* align-items: start; */
+    }
+    .filter-search div{
+        margin-top: 8px;
+    }
+    #pokemon-type{
+        margin-right: 4px;
+    }
+    
+}
+@media (max-width: 600px) {
+    #grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    #pokemon-name{
+        width: 254px;
+    }
+}
